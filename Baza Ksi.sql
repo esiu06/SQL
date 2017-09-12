@@ -106,10 +106,46 @@ o.Date ASC;*/
 /*UPDATE Clients SET IdClient=11 WHERE IdClient=3;*/
 
 
+#UPDATE Books SET Price =ROUND( Price*1.1,2);
 
-UPDATE Books SET Price =ROUND( Price*1.1,2);
 
-SELECT * FROM Books ;
+UPDATE Books SET Price=Price-10 ORDER BY Price DESC LIMIT 1;
+#SELECT * FROM Books ORDER BY Price DESC LIMIT 1;
+
+
+
+
+#SELECT *FROM Books WHERE Price=(SELECT MAX(Price) FROM Books)
+
+UPDATE Clients SET ClientName="Joanna", ClientSurname="Dostojewska" WHERE IdClient=10;
+#
+UPDATE Orders SET Status= "Wyslano" WHERE Id=4 or Id=5;
+
+
+INSERT INTO Clients 
+VALUE (NULL, "Franciszek", "Jankowski", "Chorzow");
+
+SELECT IdClient FROM Clients WHERE ClientName="Artur" AND ClientSurname="Rutkowski"; 
+
+INSERT INTO Orders (IdClient, IdBook, Date, Status)
+VALUE (7,3,"2017-09-12", "Oczekiwane");
+
+#SELECT * FROM Orders ;
+
+INSERT INTO Books (AuthorSurname, Title)
+VALUE ("Grebosz", "Synfonie C++");
+
+Select *from Books;
+
+
+
+
+
+
+
+
+
+
 
 
 
