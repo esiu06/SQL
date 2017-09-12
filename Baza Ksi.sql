@@ -133,7 +133,7 @@ VALUE (7,3,"2017-09-12", "Oczekiwane");
 #SELECT * FROM Orders ;
 
 INSERT INTO Books (AuthorSurname, Title)
-VALUE ("Grebosz", "Synfonie C++");
+VALUES ("Grebosz", "Synfonie C++");
 
 Select *from Books;
 
