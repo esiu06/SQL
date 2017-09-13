@@ -114,4 +114,23 @@ SELECT * FROM Stanowiska;
 SELECT * From Dzialy;
 SELECT imie, nazwisko, pensja  FROM Pracownicy;
 SELECT imie, nazwisko, pensja, dodatki  FROM Pracownicy;
-SELECT imie, nazwisko, pensja, dodatki FROM Pracownicy
+SELECT imie, nazwisko, pensja, dodatki FROM Pracownicy;
+ALTER TABLE Pracownicy ADD (Wynagrodzenie_calkowite NUMERIC) ;
+ALTER TABLE Pracownicy ADD (Dziennie NUMERIC);
+ALTER TABLE Pracownicy ADD (Tygodniowo NUMERIC);
+ALTER TABLE Pracownicy ADD (Miesiecznie NUMERIC);
+ALTER TABLE Pracownicy ADD (Rocznie NUMERIC);
+SELECT * FROM Pracownicy GROUP BY Wynagrodzenie_calkowite=pensja+dodatki;
+
+SELECT * FROM Pracownicy;
+
+SELECT imie, nazwisko FROM Pracownicy WHERE nazwisko LIKE 'M%';
+
+SELECT imie, nazwisko FROM Pracownicy WHERE ID_dzialu=70 || ID_dzialu=60;
+
+SELECT ID_pracownika FROM Pracownicy WHERE nazwisko LIKE 'Banko%';
+SELECT * FROM Pracownicy WHERE ID_pracownika=150;
+
+SELECT CONCAT(imie,' ',nazwisko)AS Pracownik, CONCAT(imie,' ',nazwisko)AS Przelozony FROM Pracownicy WHERE ID_przelozonego=150 ;
+
+
