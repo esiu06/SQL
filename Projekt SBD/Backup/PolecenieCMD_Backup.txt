@@ -1,0 +1,1 @@
+sqlcmd -U Kasjerzy -P esiuesiu1 -S .\SQLEXPRESS1 -Q "EXEC sp_BackupDatabases  @backupLocation='G:\STUDIA INFORMATYKA\SEMESTR V\Sieciowe Bazy Danych\Projekt\Backup\', @BackupType='F'"
